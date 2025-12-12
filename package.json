@@ -1,0 +1,39 @@
+{
+  "name": "vue-clean-admin",
+  "version": "0.1.0",
+  "description": "一个简单干净的后台管理框架",
+  "author": "caihai123",
+  "private": true,
+  "license": "MIT",
+  "homepage": "https://gitee.com/caihai123/vue-clean-admin",
+  "scripts": {
+    "dev": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@achrinza/node-ipc": "^10.1.11",
+    "@microsoft/fetch-event-source": "^2.0.1",
+    "axios": "^0.21.4",
+    "crypto-js": "^4.2.0",
+    "dompurify": "^3.3.0",
+    "element-ui": "^2.15.7",
+    "file-saver": "^2.0.5",
+    "js-cookie": "^3.0.5",
+    "marked": "^4.3.0",
+    "nprogress": "^0.2.0",
+    "vue": "^2.6.11",
+    "vue-fragment": "^1.5.1",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-router": "~4.4.0",
+    "@vue/cli-plugin-vuex": "~4.4.0",
+    "@vue/cli-service": "^4.5.13",
+    "depcheck": "^1.4.7",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
+  }
+}

@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - 14.16.0
+install:
+  - npm install
+script:
+  - npm run build 
+after_script:
+  - cd ./dist
+  - git init
+  - git config user.name "${GIT_NAME}"
+  - git config user.email "${GIT_EMAIL}"
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${TOKEN}@${GH_REF}" master:gh-page
+branches:
+  only:
+  - master
+env:
+ global:
+   - GH_REF: github.com/caihai123/vue-clean-admin.git
