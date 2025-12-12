@@ -1,0 +1,321 @@
+.patent-check-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 16px;
+
+  .main-card {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: none;
+
+    ::v-deep .el-card__body {
+      padding: 16px 32px 32px 32px;
+      border-radius: 20px !important;
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .header-section {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        position: relative;
+
+        .title-section {
+          display: flex;
+          align-items: center;
+
+          gap: 12px;
+
+          .main-title {
+            color: rgba(20, 27, 52, 1);
+            font-family: "PingFang SC";
+            font-size: 18px;
+            line-height: 27px;
+            font-weight: 600;
+          }
+
+          .version-tag {
+            flex-shrink: 0;
+            border-radius: 13.5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 10px;
+            column-gap: 10px;
+            padding: 0px 3px 0px 3px;
+            border-color: rgba(96, 60, 255, 1);
+            border-width: 1px;
+            border-style: solid;
+
+            .version-text {
+              flex-shrink: 0;
+              width: 18px;
+              height: 24px;
+              color: rgba(96, 60, 255, 1);
+              white-space: nowrap;
+              font-family: "PingFang SC";
+              font-size: 16px;
+              line-height: 24px;
+              font-weight: 600;
+            }
+          }
+        }
+
+        .divider-line {
+          width: 100%;
+          height: 2px;
+        }
+      }
+
+      .conclusion-section {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .section-title {
+          color: rgba(20, 27, 52, 1);
+          font-family: "PingFang SC";
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 600;
+          margin: 0;
+        }
+
+        .conclusion-status {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+
+          .status-icon {
+            width: 24px;
+            height: 24px;
+          }
+
+          .status-text {
+            color: rgba(78, 181, 119, 1);
+            font-family: "PingFang SC";
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 600;
+          }
+        }
+
+        .conclusion-detail {
+          color: rgba(59, 65, 89, 1);
+          font-family: "PingFang SC";
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 500;
+          margin: 0;
+        }
+      }
+
+      .section-divider {
+        width: 100%;
+        height: 2px;
+      }
+
+      .suggestion-section {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .suggestion-subtitle {
+          color: rgba(113, 128, 150, 1);
+          font-family: "PingFang SC";
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 500;
+          margin: 0;
+        }
+
+        .suggestion-content {
+          color: rgba(59, 65, 89, 1);
+          font-family: "PingFang SC";
+          font-size: 16px;
+          line-height: 32px;
+          font-weight: 500;
+
+          p {
+            margin: 0;
+          }
+        }
+
+        .btn-group {
+          display: flex;
+          gap: 24px; // 设置两个按钮之间的间距为34px
+        }
+
+        // 添加自定义按钮样式
+        .custom-button {
+          font-size: 14px; // 设置字体大小为14px
+          border-radius: 65px; // 设置圆角为65px
+          background: #603cff; // 设置背景色为#603CFF
+          border: none; // 移除边框
+          color: white; // 设置文字颜色为白色
+          padding: 10px 20px; // 设置内边距
+          font-family: "PingFang SC"; // 设置字体
+
+          &:hover {
+            background: #5032cc; // 鼠标悬停时的背景色
+          }
+        }
+      }
+
+      .similar-patents-section {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .patent-table {
+          border-radius: 20px;
+          overflow: hidden;
+          border: 1px solid rgba(239, 239, 240, 1);
+
+          ::v-deep .el-table__header {
+            th {
+              background: #f4f7fe;
+              color: rgba(20, 27, 52, 1);
+              font-family: "PingFang SC";
+              font-size: 14px;
+              line-height: 16px;
+              font-weight: normal;
+            }
+          }
+
+          ::v-deep .el-table__body {
+            td {
+              color: rgba(59, 65, 89, 1);
+              font-family: "PingFang SC";
+              font-size: 14px;
+              line-height: 21px;
+              font-weight: 500;
+            }
+
+            .view-details {
+              color: rgba(96, 60, 255, 1);
+              cursor: pointer;
+            }
+
+            .similarity-tag {
+              border: none;
+              border-radius: 60px;
+              padding: 1px 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 56px;
+
+    .feedback-buttons {
+      flex-shrink: 0;
+      border-radius: 60px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      column-gap: 14px;
+      row-gap: 0px;
+      padding: 6px 14px 6px 14px;
+      background: #ffffff;
+
+      .feedback-icon {
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+
+      .divider-line {
+        flex-shrink: 0;
+        width: 1px;
+        height: 16px;
+        background: rgba(239, 239, 240, 1);
+      }
+    }
+
+    .generate-btn {
+      width: 160px;
+      height: 56px;
+      border-radius: 65px;
+      transform: scale(0.8);
+      background: linear-gradient(
+        15deg,
+        rgba(74, 37, 225, 1) 0%,
+        rgba(123, 90, 255, 1) 93%,
+        rgba(123, 90, 255, 1) 100%
+      );
+      box-shadow: 0px 21px 27px -10px rgba(96, 60, 255, 0.48);
+      border: none;
+      color: #ffffff;
+      font-family: "PingFang SC";
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: 600;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+.expand-icon {
+  position: absolute;
+  right: 0px;
+  font-size: 20px;
+}
+
+// 抽屉的css
+.container {
+  padding: 0 1.5vw;
+  .title {
+    font-family: "黑体";
+    font-weight: 900;
+    font-size: 16px;
+    margin: 15px 0px;
+  }
+  .pl2vw {
+    padding-left: 2vw;
+    li {
+      margin: 5px 0;
+      font-size: 16px;
+      font-family: "PingFang SC";
+    }
+  }
+  .pl1vw {
+    font-size: 16px;
+    font-family: "PingFang SC";
+    list-style: none;
+    li {
+      margin: 5px 0;
+    }
+  }
+  .claims {
+    padding: 0 0 0 1vw;
+    /* 可选：确保文本是块级显示（若元素本身是行内/行内块级） */
+    display: block;
+    font-size: 16px;
+    font-family: "PingFang SC";
+    white-space: pre-wrap;
+  }
+  .mb15 {
+    margin-bottom: 15px;
+  }
+}

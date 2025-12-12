@@ -1,0 +1,27 @@
+{
+  "name": "update",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.vue src"
+  },
+  "dependencies": {
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.0",
+    "pinia": "^2.0.33",
+    "element-plus": "^2.3.3",
+    "axios": "^1.4.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "eslint": "^8.40.0",
+    "eslint-plugin-vue": "^9.12.0"
+  }
+}
